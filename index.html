@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Responsive Navbar with CSS - Plus Other Useful Trick</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#" class="barnd">
+                <p>Cl<span>Mac</span></p>
+            </a>
+        </div>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="#" class="nav-link" onmousedown="activePage(0)">
+                    <i class="fas fa-wind"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" onmousedown="activePage(1)">
+                    <i class="fas fa-tv"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" onmousedown="activePage(2)">
+                    <i class="far fa-folder"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" onmousedown="activePage(3)">
+                    <i class="fas fa-sliders-h"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" onmousedown="activePage(4)">
+                    <i class="fas fa-lock"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" onmousedown="activePage(5)">
+                    <i class="far fa-envelope"></i>
+                </a>
+            </li>
+            <li class="nav-item mt-8 logout">
+                <a href="#" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </a>
+            </li>
+            <span class="goo"></span>
+        </ul>
+    </nav><!-- end navbar -->
+    <!-- page-transition -->
+    <div class="page-transition">
+        <div class="btn-box">
+            <button id="btn-main" onclick="openMain()"><i class="fas fa-th-list"></i></button>
+            <button id="btn-statistics" onclick="openStatistics()"><i class="fas fa-address-card"></i></button>
+        </div>
+    </div><!-- end page-transition -->
+    <main>
+        <section id="main" class="main">
+            <!-- baner -->
+            <div class="baner">
+                <div class="baner-text">
+                    <h1>Hello, Barbara!</h1>
+                    <p>Welcome back to Clean My Mac</p>
+                </div>
+                <div class="baner-png">
+                    <img src="http://pngimg.com/uploads/laptop/laptop_PNG5920.png" alt="">
+                </div>
+            </div><!-- end baner -->
+            <!-- month -->
+            <div class="month">
+                <div class="month-header">
+                    <div class="paginate-month">
+                        <p>December 2-8</p>
+                        <span>
+                            <i class="fas fa-chevron-left"></i>
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
+                    </div>
+                    <div class="name-month">
+                        <i class="fas fa-calendar-week"></i>
+                        <span>Month</span>
+                    </div>
+                </div>
+                <div class="month-body">
+                    <div class="month-day ">
+                        <p>Mon</p>
+                        <span>2</span>
+                        <span class="circle bc-orange"></span>
+                    </div>
+                    <div class="month-day">
+                        <p>Tue</p>
+                        <span>3</span>
+                        <span class="circle bc-cyn "></span>
+                    </div>
+                    <div class="month-day">
+                        <p>Wed</p>
+                        <span>4</span>
+                        <span class="circle bc-red"></span>
+                    </div>
+                    <div class="month-day active">
+                        <p>Thu</p>
+                        <span>5</span>
+                        <span class="circle bc-white"></span>
+                    </div>
+                    <div class="month-day">
+                        <p>Fri</p>
+                        <span>6</span>
+                        <span class="circle bc-orange"></span>
+                    </div>
+                    <div class="month-day">
+                        <p>Sat</p>
+                        <span>7</span>
+                        <span class="circle bc-red"></span>
+                    </div>
+                    <div class="month-day">
+                        <p>Sun</p>
+                        <span>8</span>
+                        <span class="circle bc-cyn"></span>
+                    </div>
+                </div>
+            </div><!-- end month -->
+            <!-- weekly -->
+            <div class="weekly">
+                <div class="weekly-header">
+                    <div class="title">
+                        <p>Weekly Reports</p>
+                    </div>
+                    <div class="link">
+                        <a href="#">Today</a>
+                        <a href="#" class="active mx-5">Week</a>
+                        <a href="#">Month</a>
+                    </div>
+                </div>
+                <div class="weekly-body">
+                    <div class="item">
+                        <span class="bd-orange">
+                            <i class="fas fa-server c-orange"></i>
+                        </span>
+                        <p>System Junk</p>
+                        <p class="item-size">
+                            35 Gb
+                        </p>
+                    </div>
+                    <div class="item">
+                        <span class="bd-red">
+                            <i class="fab fa-itunes-note c-red"></i>
+                        </span>
+                        <p>iTunes Junk</p>
+                        <p class="item-size">
+                            1.25 Gb
+                        </p>
+                    </div>
+                    <div class="item">
+                        <span class="bd-cyn">
+                            <i class="far fa-trash-alt c-cyn"></i>
+                        </span>
+                        <p>Trash Bins</p>
+                        <p class="item-size">
+                            16.35 Gb
+                        </p>
+                    </div>
+                    <div class="item">
+                        <span class="bd-blue">
+                            <i class="fab fa-instagram c-blue"></i>
+                        </span>
+                        <p>Photo Junk</p>
+                        <p class="item-size">
+                            12.10 Gb
+                        </p>
+                    </div>
+                </div>
+            </div><!-- end weekly -->
+            <!-- update -->
+            <div class="update">
+                <div class="update-header">
+                    <p>Updating Monitoring</p>
+                </div>
+                <div class="update-body">
+                    <div class="system">
+                        <div class="update-content">
+                            <h3 class="c-blue-dark">Syetem Files</h3>
+                            <p class="c-grey">December 2019</p>
+                        </div>
+                        <hr>
+                        <div class="update-charts">
+                            <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="200" height="200"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none"
+                                    cx="16.91549431" cy="16.91549431" r="10.91549431" />
+                                <circle class="circle-chart__circle circle-chart__circle--negative" stroke="#f25767"
+                                    stroke-width="2" stroke-dasharray="17,1287" stroke-linecap="round" fill="none"
+                                    cx="16.91549431" cy="16.91549431" r="10.91549431" />
+                                <g class="circle-chart__info">
+                                    <text class="circle-chart__percent" x="16.91549431" y="16.5"
+                                        alignment-baseline="central" text-anchor="middle" font-size="5">25%</text>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="application bc-blue-dark">
+                        <div class="update-content">
+                            <h3 class="c-white">Applications</h3>
+                            <p class="c-grey">December 2019</p>
+                        </div>
+                        <hr>
+                        <div class="update-charts">
+                            <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="200" height="200"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle class="circle-chart__background" stroke="#5c5fb2" stroke-width="2" fill="none"
+                                    cx="16.91549431" cy="16.91549431" r="10.91549431" />
+                                <circle class="circle-chart__circle circle-chart__circle--negative" stroke="#ffa000"
+                                    stroke-width="2" stroke-dasharray="34.226" stroke-linecap="round" fill="none"
+                                    cx="16.91549431" cy="16.91549431" r="10.91549431" />
+                                <g class="circle-chart__info">
+                                    <text class="circle-chart__percent" x="16.91549431" y="16.5"
+                                        alignment-baseline="central" fill="white" text-anchor="middle"
+                                        font-size="5">50%</text>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end update -->
+        </section>
+        <!-- statistics -->
+        <section id="statistics" class="statistics">
+            <div class="statistics-header">
+                <div>
+                    <a href="#"><img
+                            src="https://images.unsplash.com/photo-1596815074853-84c4949c5b58?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1519&q=80"
+                            alt=""></a>
+                    <a href="#" class="active"><i class="far fa-bell"></i></a>
+                    <a href="#"><i class="fas fa-cog"></i></a>
+                </div>
+            </div>
+            <div class="statistics-body">
+                <div class="function">
+                    <p>Othter Function</p>
+                    <div class="fn">
+                        <div>
+                            <div class="bc-fn bc-red">
+                                <span class="bc-span-red"><i class="far fa-chart-bar"></i></span>
+                                <i class="fas fa-ellipsis-v c-white"></i>
+                            </div>
+                            <div class="fn-description">
+                                <p>Optimization</p>
+                                <div class="toggle-btn " onclick="this.classList.toggle('bc-toggle-red')">
+                                    <div class="inner-circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="bc-fn bc-orange">
+                                <span class="bc-span-orange"><i class="far fa-chart-bar"></i></span>
+                                <i class="fas fa-ellipsis-v c-white"></i>
+                            </div>
+                            <div class="fn-description">
+                                <p>Smart Scan</p>
+                                <div class="toggle-btn " onclick="this.classList.toggle('bc-toggle-orange')">
+                                    <div class="inner-circle "></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="bc-fn bc-cyn">
+                                <span class="bc-span-cyn"><i class="far fa-check-circle"></i></span>
+                                <i class="fas fa-ellipsis-v c-white"></i>
+                            </div>
+                            <div class="fn-description">
+                                <p>Malware</p>
+                                <div class="toggle-btn " onclick="this.classList.toggle('bc-toggle-cyn')">
+                                    <div class="inner-circle "></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="last_child">
+                            <div class="bc-fn">
+                                <span class="bc-span-white"><i class="fas fa-sync-alt"></i></span>
+                                <i class="fas fa-ellipsis-v c-white"></i>
+                            </div>
+                            <div class="fn-description">
+                                <p class="c-grey">Updater</p>
+                                <div class="toggle-btn">
+                                    <div class="inner-circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cleaning">
+                    <p>Statistics Of Cleaning</p>
+                    <div class="cleaning-statistic">
+                        <div class="cleaning-header">
+                            <div class="cleaning-header-title">
+                                <p class="c-grey">CURRENT/FRIDAY</p>
+                                <span>58%</span>
+                            </div>
+                            <div class="cleaning-header-button">
+                                <a href="#" class="bc-orange c-white">
+                                    <i class="far fa-chart-bar"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fas fa-chart-area c-grey"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="cleaning-body">
+                            <section id="chartVertical">
+                                <div class="charts-container">
+                                    <div class="bar-chart-vertical">
+                                        <div class="bar-chart--track">
+                                            <span class="bar-chart--progress" style="height: 25%;"></span>
+                                            <p>MO</p>
+                                        </div>
+                                        <div class="bar-chart--track">
+                                            <span class="bar-chart--progress" style="height: 65%;"></span>
+                                            <p>TU</p>
+                                        </div>
+                                        <div class="bar-chart--track">
+                                            <span class="bar-chart--progress" style="height: 95%;"></span>
+                                            <p>WE</p>
+                                        </div>
+                                        <div class="bar-chart--track">
+                                            <span class="bar-chart--progress" style="height: 25%;"></span>
+                                            <p>TH</p>
+                                        </div>
+                                        <div class="bar-chart--track">
+                                            <span class="bar-chart--progress" style="height: 65%;"></span>
+                                            <p>FR</p>
+                                        </div>
+                                        <div class="bar-chart--track">
+                                            <span class="bar-chart--progress" style="height: 95%;"></span>
+                                            <p>SA</p>
+                                        </div>
+                                        <div class="bar-chart--track">
+                                            <span class="bar-chart--progress" style="height: 95%;"></span>
+                                            <p>SU</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
